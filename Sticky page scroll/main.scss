@@ -1,111 +1,107 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: poppins, serif;
-    background-color: #fefefe;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: poppins, serif;
+  background-color: #fefefe;
 }
 
 .background__image {
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-attachment: fixed;
-    background: linear-gradient(110deg, rgba(86,0,127,1) 0%, rgba(153,94,140,1) 50%, rgba(0,212,255,1) 100%);
-    height: 100vh;
-    width: 100%;
-    position: relative;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-attachment: fixed;
+  background: linear-gradient(
+    110deg,
+    rgba(86, 0, 127, 1) 0%,
+    rgba(153, 94, 140, 1) 50%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  z-index: unset;
+
+  img {
+    padding-top: 7em;
+    width: 90vw;
+    margin: 0 auto;
+    background-color: transparent;
+    position: fixed;
     z-index: unset;
-
-
-     img{
-         padding-top: 7em;
-            width: 90vw;
-            margin: 0 auto;
-            background-color: transparent;
-            position: fixed;
-            z-index: unset;
-        }
-    
+  }
 }
 
+section {
+  position: relative;
+  display: flex;
+  height: auto;
 
-section{
-    position: relative;
-     display: flex;
-     height: auto;
-     
+  .device__image {
+    position: sticky;
+    top: 0;
+    min-width: 50%;
+    height: 100vh;
 
-     .device__image{
-        position: sticky;
-        top: 0;
-        min-width: 50%;
-        height: 100vh;
-        
-
-        & img{
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%,-50%);
-            max-width: 40vw;
-        }   
-     }
-     h2 {
-         font-size: 2em;
-         font-weight: bolder;
-     }
-     .device__description{
-        padding: 20px;
-        text-align: left;
-        color: #555;
+    & img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      max-width: 40vw;
     }
-     
-    &:nth-child(2n+1) .device__description {
-        padding: 20px;
-        text-align: right;
-    }
-     &:nth-child(2n+1){
-         flex-direction: row-reverse;
-     }
-    }
+  }
+  h2 {
+    font-size: 2em;
+    font-weight: bolder;
+  }
+  .device__description {
+    padding: 20px;
+    text-align: left;
+    color: #555;
+  }
 
-    @media (max-width: 900px) {
-        section{
-            display: flex;
-            flex-direction: column;
-            &:nth-child(2n+1) .device__description {
-                padding: 20px;
-                text-align: left;
-            }
-            &:nth-child(2n+1){
-                flex-direction: column;
-        }
-        .device__image{
-            position: sticky;
-            min-width: 50%;
-            height: 30%;
-            
-    
-            & img{
-                position: absolute;
-                max-width: 100%;
-                background-color: #fefefe;
-            }   
-         }
-         .device__description{
-            padding: 20px;
-            text-align: left;
-            color: #555;
+  &:nth-child(2n + 1) .device__description {
+    padding: 20px;
+    text-align: right;
+  }
+  &:nth-child(2n + 1) {
+    flex-direction: row-reverse;
+  }
+}
 
+@media (max-width: 900px) {
+  section {
+    display: flex;
+    flex-direction: column;
+    &:nth-child(2n + 1) .device__description {
+      padding: 20px;
+      text-align: left;
+    }
+    &:nth-child(2n + 1) {
+      flex-direction: column;
+    }
+    .device__image {
+      position: sticky;
+      min-width: 50%;
+      height: 30%;
+
+      & img {
+        position: absolute;
+        max-width: 100%;
+        background-color: #fefefe;
+      }
+    }
+    .device__description {
+      padding: 20px;
+      text-align: left;
+      color: #555;
     }
     h2 {
-        padding-top: 10em;
-        font-size: 2em;
-        font-weight: 800;
+      padding-top: 10em;
+      font-size: 2em;
+      font-weight: 800;
     }
-
-    }
+  }
 }
-    

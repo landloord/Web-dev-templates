@@ -1,16 +1,23 @@
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-family: poppins, serif;
   background-color: #fefefe;
 }
 
 .background__image {
   background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background-attachment: fixed;
   background: linear-gradient(110deg, #56007f 0%, #995e8c 50%, #00d4ff 100%);
   height: 100vh;
@@ -30,11 +37,14 @@
 
 section {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   height: auto;
 }
 
 section .device__image {
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
   min-width: 50%;
@@ -45,7 +55,8 @@ section .device__image img {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   max-width: 40vw;
 }
 
@@ -60,28 +71,40 @@ section .device__description {
   color: #555;
 }
 
-section:nth-child(2n+1) .device__description {
+section:nth-child(2n + 1) .device__description {
   padding: 20px;
   text-align: right;
 }
 
-section:nth-child(2n+1) {
-  flex-direction: row-reverse;
+section:nth-child(2n + 1) {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
 }
 
 @media (max-width: 900px) {
   section {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
-  section:nth-child(2n+1) .device__description {
+  section:nth-child(2n + 1) .device__description {
     padding: 20px;
     text-align: left;
   }
-  section:nth-child(2n+1) {
-    flex-direction: column;
+  section:nth-child(2n + 1) {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   section .device__image {
+    position: -webkit-sticky;
     position: sticky;
     min-width: 50%;
     height: 30%;
